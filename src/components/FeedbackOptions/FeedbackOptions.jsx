@@ -9,10 +9,16 @@ export default class FeedbackOptions extends Component {
    
   render() {
     return (
-      <>
-        <button onClick={this.props.goodFeedback} >Good</button>
+        <>
+            {this.props.options.map((option) => {
+                return (
+               <button key={option} onClick={()=>this.props.onLeaveFeedback(option)}>{option}</button>) 
+                })
+    
+            }
+        {/* <button onClick={this.props.goodFeedback} >Good</button>
         <button onClick={this.props.neutralFeedback}>Neutral</button>
-        <button onClick={this.props.badFeedback}>Bad</button>
+        <button onClick={this.props.badFeedback}>Bad</button> */}
       </>
     );
   }

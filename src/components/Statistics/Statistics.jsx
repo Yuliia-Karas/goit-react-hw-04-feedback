@@ -23,7 +23,6 @@ export default class FeedbackOptions extends Component {
 {
         return (
             <>
-                <h2>Statistics</h2>
                 <p>Good: { this.props.state.good}</p>
                 <p>Neutral: { this.props.state.neutral}</p>
                 <p>Bad: {this.props.state.bad}</p>
