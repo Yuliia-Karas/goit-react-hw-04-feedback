@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import css from './Statistics.module.css';
 import PropTypes from 'prop-types';
+import { Notification } from "components/Notification/Notification";
 
 export default class FeedbackOptions extends Component {
     constructor(props) {
@@ -18,21 +19,17 @@ export default class FeedbackOptions extends Component {
         )
     }
 
-    render()
-
-{
+    render() {
+        const total = this.countTotalFeedback();
         return (
+             total ? (
             <>
                 <p>Good: { this.props.state.good}</p>
                 <p>Neutral: { this.props.state.neutral}</p>
                 <p>Bad: {this.props.state.bad}</p>
-                <p>Total: {this.countTotalFeedback()}</p>
+                <p>Total: {total}</p>
                 <p>Positive feedback:{ this.countPositiveFeedbackPercentage()}%</p>
-
-                
-            </>
-            
+            </>) : (<Notification message="There is no feedback"></Notification>)
         )
-        
     }
 }
