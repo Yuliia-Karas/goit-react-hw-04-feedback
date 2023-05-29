@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import css from './Statistics.module.css';
-import PropTypes from 'prop-types';
+// import css from './Statistics.module.css';
+// import PropTypes from 'prop-types';
 import { Notification } from "components/Notification/Notification";
 
 export default class FeedbackOptions extends Component {
