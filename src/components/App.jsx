@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import { Section } from './Section/Section';
-// import { Notification} from './Notification/Notification';
-
 
 export class App extends Component {
   constructor(props) {
@@ -13,27 +11,26 @@ export class App extends Component {
       neutral: 0,
       bad: 0,
     };
-    }
-  
-  onLeaveFeedback=(option)=>
-  {
-    console.log(option);
-    return (this.setState((state) => ({ [option]: state[option] + 1 })));
   }
+
+  onLeaveFeedback = option => {
+    console.log(option);
+    return this.setState(state => ({ [option]: state[option] + 1 }));
+  };
 
   render() {
     return (
       <>
-        
         {/* <FeedbackOptions goodFeedback={this.goodFeedback} neutralFeedback={this.neutralFeedback} badFeedback={this.badFeedback}   /> */}
         <Section title="Please leave feedback">
-          <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={this.onLeaveFeedback} />
-        </Section> 
+          <FeedbackOptions
+            options={['good', 'neutral', 'bad']}
+            onLeaveFeedback={this.onLeaveFeedback}
+          />
+        </Section>
         <Section title="Statistics">
           <Statistics state={this.state} />
         </Section>
-        
-        
       </>
     );
   }
