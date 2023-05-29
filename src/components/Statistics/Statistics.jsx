@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { Notification } from "components/Notification/Notification";
 
 export default class FeedbackOptions extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     countTotalFeedback() {
     return (
