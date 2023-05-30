@@ -1,0 +1,8 @@
+.notification {
+    margin: 0 auto;
+    background-color: rgb(229, 229, 245);
+    width: 300px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+     border-radius: 4px;
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import css from './FeedbackOptions.module.css';
+import css from './FeedbackOptions.module.css';
 import PropTypes from 'prop-types';
 
 export default class FeedbackOptions extends Component {
@@ -9,10 +9,11 @@ export default class FeedbackOptions extends Component {
 
   render() {
     return (
-      <>
+      <div className={css['feedback-options']}>
         {this.props.options.map(option => {
           return (
             <button
+              className={css.button}
               key={option}
               onClick={() => this.props.onLeaveFeedback(option)}
             >
@@ -23,7 +24,7 @@ export default class FeedbackOptions extends Component {
         {/* <button onClick={this.props.goodFeedback} >Good</button>
         <button onClick={this.props.neutralFeedback}>Neutral</button>
         <button onClick={this.props.badFeedback}>Bad</button> */}
-      </>
+      </div>
     );
   }
 }

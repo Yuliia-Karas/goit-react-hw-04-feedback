@@ -3,6 +3,7 @@ import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import { Section } from './Section/Section';
 
+
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +22,7 @@ export class App extends Component {
   render() {
     return (
       <>
-        {/* <FeedbackOptions goodFeedback={this.goodFeedback} neutralFeedback={this.neutralFeedback} badFeedback={this.badFeedback}   /> */}
+                      {/* <FeedbackOptions goodFeedback={this.goodFeedback} neutralFeedback={this.neutralFeedback} badFeedback={this.badFeedback}   /> */}
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
@@ -31,6 +32,7 @@ export class App extends Component {
         <Section title="Statistics">
           <Statistics state={this.state} />
         </Section>
+
       </>
     );
   }
